@@ -62,3 +62,48 @@ console.log(phrase.indexOf("live"))//-1
 
 //prompt
 //is used to interact with the user 
+
+//if we just want to check if a string contains a spcif substring, we can use includes(). It will return a boolean.
+
+let test = "testing... one, two ,three, testing..."
+
+console.log(test.includes("two"))
+console.log(test.indexOf("two"))
+
+//extracting a substring 
+//slice(startIndex, endIndex)
+//doesn´t include the endIndex
+//without modifying the originial string
+
+//             0123456789012
+let message = "Hello, world!";
+let greeting2 = message.slice(0, 5);
+console.log(greeting2)
+
+let world = message.slice(7,12)
+console.log(world)
+
+//using just startIndex, without endIndex, everything from the startIndex will be extracted
+//                          1         2         3 
+//                0123456789012345678901234567890
+let newMessage = "Hi, let's Study Something Today"
+let exampleWithSlice = newMessage.slice(16)//something today
+console.log(exampleWithSlice)
+
+
+//Casing in js
+//toLowerCase() is used to convert all the string in lowercase
+//toUpperCase() is used to convert all the string to uppercase
+//it´s important in comparisons
+console.log(newMessage.toUpperCase())
+console.log(newMessage.toLowerCase())
+
+//Cleaning whitespaces
+//trim()
+//trimStart()
+//trimEnd()
+
+let spaces = "     EDM-eletronic dancing music     "
+console.log(spaces.trimStart())
+console.log(spaces.trimEnd())
+console.log(spaces.trim())
