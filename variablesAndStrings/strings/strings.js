@@ -107,3 +107,33 @@ let spaces = "     EDM-eletronic dancing music     "
 console.log(spaces.trimStart())
 console.log(spaces.trimEnd())
 console.log(spaces.trim())
+
+
+/*
+replace - is a method() case-sensitie where search and the string 
+.replace(searchValue, newValue)
+the method, by default, just replace the first ocorrence
+to replace all of these occurrences, we use replaceAll
+
+*/
+
+let mrPotato = "The mr. Potato Head is a Potato Toy, but not made using Potato."
+
+let updatedMrPotato = mrPotato.replace("Potato", "Avocado")
+
+console.log(updatedMrPotato)
+
+updatedMrPotato = mrPotato.replaceAll("Potato", "Avocado")
+console.log(updatedMrPotato)
+
+
+/*
+repeat - is a method to repeat a string in js
+String.repeat(count)
+*/
+
+let myNameIs = "Slim Shady"
+
+console.log(myNameIs.repeat(3))
+// console.log(myNameIs.repeat(Infinity)) RangeError: Invalid count value: Infinity
+// console.log(myNameIs.repeat(-3)) RangeError: Invalid count value: -3
