@@ -107,3 +107,63 @@ let num1 = 4.4
 console.log(Math.ceil(num1))
 console.log(Math.floor(num1))
 console.log(Math.round(num1))
+
+/*
+Another way to make conditionals:
+
+switch statements can be used when the values are determined.
+
+switch (expression):
+    case value1:
+        code 
+        break;
+    case value2:
+        code
+        break;
+    ...
+    default:
+        code
+
+1 - every case need a break, other wise the program will continue executing
+2 - default is the value if the expression doesn´t match any case
+3 - strict equality (===) switch case doesn´t make type coercion
+*/
+
+let creditScore = 720;
+let annualIncome = 60000;
+let loanAmount = 200000;
+
+let eligibilityStatus;
+
+if (creditScore >= 750 && annualIncome >= 80000) {
+    eligibilityStatus = "Eligible for premium loan rates.";
+} else if (creditScore >= 700 && annualIncome >= 50000) {
+    eligibilityStatus = "Eligible for standard loan rates.";
+} else if (creditScore >= 650 && annualIncome >= 40000) {
+    eligibilityStatus = "Eligible for subprime loan rates.";
+} else if (creditScore < 650) {
+    eligibilityStatus = "Not eligible due to low credit score.";
+} else {
+    eligibilityStatus = "Not eligible due to insufficient income.";
+}
+console.log(eligibilityStatus)
+
+switch (true) {
+    case creditScore >= 750 && annualIncome >= 80000:
+        eligibilityStatus = "Eligible for premium loan rates."
+        break;
+    case creditScore >= 700 && annualIncome >= 50000:
+        eligibilityStatus = "Eligible for standard loan rates.";
+        break;
+    case creditScore >= 650 && annualIncome >= 40000:
+        eligibilityStatus = "Eligible for subprime loan rates.";
+        break;
+    case creditScore < 650 :
+        eligibilityStatus = "Not eligible due to low credit score.";
+        break
+    default:
+        eligibilityStatus = "Not eligible due to insufficient income."
+        break;
+}
+
+console.log(eligibilityStatus)
